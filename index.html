@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartResult Automated Student Result Management</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="Responsive/Responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+</head>
+
+<body>
+    <div id="mobile-header">
+        <div class="logo">
+            <a href="index.html">
+                <h1>Smart Result Zone</h1>
+            </a>
+        </div>
+        <div class="menu-icon">
+            <i class="fa-solid fa-bars" id="openMenu"></i>
+        </div>
+    </div>
+
+    <div id="menu-item">
+        <div class="menu-icon"><i class="fa-solid fa-x" id="closeMenu"></i></div>
+        <div class="menu-list">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="documentation.html">Documentation</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="mob-register">
+            <a href="register.html"><i class="fa-solid fa-user"></i></a>
+        </div>
+    </div>
+
+
+    <header id="desk-header">
+        <div class="header-div">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>Smart Result Zone</h1>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="documentation.html">Documentation</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="register">
+                <a href="register.html"><i class="fa-solid fa-user"></i></a>
+            </div>
+        </div>
+    </header>
+    <div class="main-container">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>SmartResult Automated Student Result Management</h1>
+
+                <p class="hero-description">
+                    SmartResult simplifies academic result processing by instantly calculating grades and pass/fail
+                    status
+                    in one efficient dashboard.
+                </p>
+
+                <p class="hero-subtext">
+                    Designed for teachers and educational institutions.
+                </p>
+
+                <div class="hero-features">
+                    <span>✔ Automated Grade Calculation</span>
+                    <span>✔ Instant Pass / Fail Status</span>
+                    <span>✔ Error-Free Processing</span>
+                </div>
+
+                <div class="hero-actions">
+                    <a href="#studentForm" class="primary-btn">Try Demo</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="data-box">
+            <div class="input-form">
+                <form id="studentForm">
+                    <div class="form-group">
+                        <label for="name">Student Name</label>
+                        <input type="text" id="name" placeholder="Enter full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="roll">Roll Number</label>
+                        <input type="text" id="roll" placeholder="Enter roll number" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bangla">Bangla Marks</label>
+                        <input type="number" id="bangla" placeholder="0-100" min="0" max="100" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="english">English Marks</label>
+                        <input type="number" id="english" placeholder="0-100" min="0" max="100" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="math">Math Marks</label>
+                        <input type="number" id="math" placeholder="0-100" min="0" max="100" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="science">Science Marks</label>
+                        <input type="number" id="science" placeholder="0-100" min="0" max="100" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gs">Global Studies Marks</label>
+                        <input type="number" id="gs" placeholder="0-100" min="0" max="100" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="religion">Religion Marks</label>
+                        <input type="number" id="religion" placeholder="0-100" min="0" max="100" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ict">ICT Marks</label>
+                        <input type="number" id="ict" placeholder="0-100" min="0" max="100" required>
+                    </div>
+
+                    <div class="form-buttons">
+                        <button id="submit-btn" type="submit" onclick="GetResult()">Add Result</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+
+    <section class="benefits-section">
+        <div class="section-header">
+            <h2>Why Choose SmartResult?</h2>
+            <p>SmartResult helps educators manage academic results faster, smarter, and without errors.</p>
+        </div>
+
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <h3>Time Saving</h3>
+                <p>Automates result calculation and grading, saving valuable time for teachers.</p>
+            </div>
+
+            <div class="benefit-card">
+                <h3>Error-Free Processing</h3>
+                <p>Eliminates manual calculation mistakes with accurate and consistent results.</p>
+            </div>
+
+            <div class="benefit-card">
+                <h3>Easy to Use</h3>
+                <p>A simple and intuitive interface that requires no technical expertise.</p>
+            </div>
+
+            <div class="benefit-card">
+                <h3>Instant Results</h3>
+                <p>View total marks, grades, and pass/fail status instantly.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="users-section">
+        <div class="section-header">
+            <h2>Who Is SmartResult For?</h2>
+            <p>Designed to support educational professionals and institutions.</p>
+        </div>
+
+        <div class="users-grid">
+            <div class="user-card">
+                <h3>School Teachers</h3>
+                <p>Quickly prepare student results without manual calculations.</p>
+            </div>
+
+            <div class="user-card">
+                <h3>Coaching Centers</h3>
+                <p>Manage results for multiple batches efficiently.</p>
+            </div>
+
+            <div class="user-card">
+                <h3>Educational Institutions</h3>
+                <p>Ensure consistent and standardized result processing.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="site-footer">
+        <div class="footer-content">
+
+            <h3 class="footer-title">SmartResult</h3>
+            <p class="footer-tagline">
+                Automated Academic Result Processing System
+            </p>
+
+            <p class="footer-credit">
+                Developed by <strong>Santona Sonar</strong>
+            </p>
+
+            <p class="footer-tech">
+                Built with HTML, CSS & JavaScript
+            </p>
+
+            <p class="footer-copy">
+                © <span id="currentYear"></span> SmartResult. All rights reserved.
+            </p>
+
+
+        </div>
+    </footer>
+
+
+    <script src="index.js"></script>
+    <script src="Responsive/responsiveJs.js"></script>
+</body>
+
+</html>

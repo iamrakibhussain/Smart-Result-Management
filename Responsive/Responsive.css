@@ -1,0 +1,197 @@
+#menu-item {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    #desk-header {
+        display: none;
+    }
+
+    #mobile-header {
+        display: block;
+    }
+
+    #mobile-header {
+        width: 100%;
+        padding: 20px 30px;
+        display: flex;
+        margin: 10px auto;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #menu-item {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        height: 100vh;
+        width: 35vw;
+        background-color: #136106;
+        border: none;
+        border-radius: 0 12px 12px 0;
+        padding: 20px 25px;
+        z-index: 999;
+        transition: left 0.3s ease;
+    }
+
+    .menu-list ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 17px;
+    }
+
+    .menu-list ul {
+        list-style: none;
+    }
+    .menu-icon i{
+        font-size: 25px;
+    }
+
+    .menu-list ul li {
+        padding: 5px 0;
+    }
+
+    .mob-register i {
+        font-size: 25px;
+        cursor: pointer;
+        color: black;
+    }
+
+    .input-form {
+        width: 95%;
+        padding: 25px 15px;
+    }
+
+    .form-group label {
+        font-size: 14px;
+    }
+
+    .form-group input {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    .form-buttons button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    .form-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .data-box {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    #resultTable {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    #resultTable thead,
+    #resultTable tbody,
+    #resultTable th,
+    #resultTable td,
+    #resultTable tr {
+        display: block;
+    }
+
+    #resultTable thead {
+        display: none;
+    }
+
+    #resultTable tbody tr {
+        margin-bottom: 15px;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        padding: 10px;
+    }
+
+    #resultTable tbody td {
+        text-align: left;
+        padding: 8px 10px;
+        position: relative;
+    }
+
+    #resultTable tbody td::before {
+        content: attr(data-label);
+        position: relative;
+        left: 0;
+        display: block;
+        font-weight: 600;
+        text-transform: capitalize;
+        margin-bottom: 3px;
+    }
+
+    .delete-btn {
+        padding: 5px 10px;
+        font-size: 13px;
+    }
+
+    .section-header h2 {
+        font-size: 26px;
+    }
+
+    .benefits-section,
+    .users-section {
+        padding: 20px 8%;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .main-container {
+        gap: 15px;
+        padding: 40px 20px 0 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 30px;
+    }
+
+    .hero-description {
+        font-size: 20px;
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    .hero-subtext {
+        font-size: 15px;
+    }
+
+    .hero-features {
+        margin: 30px auto;
+        justify-content: center;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    .header-div {
+        padding: 10px 80px;
+    }
+
+    .logo h1 {
+        font-size: 23px;
+    }
+
+    .input-form {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .benefits-section,
+    .users-section {
+        padding: 40px 8%;
+    }
+
+}
