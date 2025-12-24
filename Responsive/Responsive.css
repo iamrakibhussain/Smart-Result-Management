@@ -14,8 +14,9 @@
     #mobile-header {
         width: 100%;
         padding: 20px 30px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
         display: flex;
-        margin: 10px auto;
+        margin: auto;
         justify-content: space-between;
         align-items: center;
     }
@@ -26,7 +27,7 @@
         top: 0;
         left: -100%;
         height: 100vh;
-        width: 35vw;
+        width: 45vw;
         background-color: #136106;
         border: none;
         border-radius: 0 12px 12px 0;
@@ -43,19 +44,26 @@
 
     .menu-list ul {
         list-style: none;
+        margin-top: 30px;
     }
-    .menu-icon i{
+
+    .menu-icon i {
         font-size: 25px;
     }
 
+    #closeMenu {
+        color: white;
+    }
+
     .menu-list ul li {
-        padding: 5px 0;
+        padding: 8px 0;
     }
 
     .mob-register i {
         font-size: 25px;
         cursor: pointer;
         color: black;
+        margin-top: 12px;
     }
 
     .input-form {
@@ -181,7 +189,7 @@
     }
 
     .logo h1 {
-        font-size: 23px;
+        font-size: 25px;
     }
 
     .input-form {
