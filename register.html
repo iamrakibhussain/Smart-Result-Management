@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Smart Result Zone</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="Responsive/Responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body>
+    <div id="mobile-header">
+        <div class="logo">
+            <a href="index.html">
+                <h1>Smart Result Zone</h1>
+            </a>
+        </div>
+        <div class="menu-icon">
+            <i class="fa-solid fa-bars" id="openMenu"></i>
+        </div>
+    </div>
+
+    <div id="menu-item">
+        <div class="menu-icon"><i class="fa-solid fa-x" id="closeMenu"></i></div>
+        <div class="menu-list">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="documentation.html">Documentation</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="mob-register">
+            <a href="register.html"><i class="fa-solid fa-user"></i></a>
+        </div>
+    </div>
+
+    <header id="desk-header">
+        <div class="header-div">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>Smart Result Zone</h1>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="documentation.html">Documentation</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="register">
+                <a href="register.html"><i class="fa-solid fa-user"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Create Account</h1>
+                <p class="hero-description">
+                    Join Smart Result Zone to manage your student results efficiently.
+                </p>
+            </div>
+        </div>
+
+        <div class="data-box">
+            <div class="input-form">
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label for="r-name">Full Name</label>
+                        <input type="text" id="r-name" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="r-email">Email Address</label>
+                        <input type="email" id="r-email" placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="r-password">Password</label>
+                        <input type="password" id="r-password" placeholder="Create a password" required>
+                    </div>
+
+                    <div class="form-buttons">
+                        <button type="submit">Sign Up</button>
+                    </div>
+                    
+                    <p style="color: white; margin-top: 15px; text-align: center;">
+                        Already have an account? <a href="#" style="color: #fff; text-decoration: underline;">Login here</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <h3 class="footer-title">SmartResult</h3>
+            <p class="footer-tagline">Automated Academic Result Processing System</p>
+            <p class="footer-credit">Developed by <strong>Santona Sonar</strong></p>
+            <p class="footer-tech">Built with HTML, CSS & JavaScript</p>
+            <p class="footer-copy">© <span id="currentYear"></span> SmartResult. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="Responsive/responsiveJs.js"></script>
+    <script>document.getElementById("currentYear").textContent = new Date().getFullYear();</script>
+</body>
+</html>

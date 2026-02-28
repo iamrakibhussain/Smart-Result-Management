@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation - Smart Result Zone</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="Responsive/Responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body>
+    <div id="mobile-header">
+        <div class="logo">
+            <a href="index.html">
+                <h1>Smart Result Zone</h1>
+            </a>
+        </div>
+        <div class="menu-icon">
+            <i class="fa-solid fa-bars" id="openMenu"></i>
+        </div>
+    </div>
+
+    <div id="menu-item">
+        <div class="menu-icon"><i class="fa-solid fa-x" id="closeMenu"></i></div>
+        <div class="menu-list">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="documentation.html">Documentation</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="mob-register">
+            <a href="register.html"><i class="fa-solid fa-user"></i></a>
+        </div>
+    </div>
+
+    <header id="desk-header">
+        <div class="header-div">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>Smart Result Zone</h1>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="documentation.html">Documentation</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="register">
+                <a href="register.html"><i class="fa-solid fa-user"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>System Documentation</h1>
+                <p class="hero-description">
+                    Understanding how SmartResult calculates grades and processes data.
+                </p>
+                
+                <div style="margin-top: 30px; text-align: left;">
+                    <h3>Grading Logic</h3>
+                    <ul style="list-style: none; margin-top: 10px; line-height: 1.8;">
+                        <li><strong>A+</strong> : Average 80 and above</li>
+                        <li><strong>A</strong> : Average 70 - 79</li>
+                        <li><strong>B</strong> : Average 60 - 69</li>
+                        <li><strong>C</strong> : Average 50 - 59</li>
+                        <li><strong>D</strong> : Average below 50</li>
+                        <li><strong>F (Fail)</strong> : If marks are below 33 in any single subject.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <h3 class="footer-title">SmartResult</h3>
+            <p class="footer-tagline">Automated Academic Result Processing System</p>
+            <p class="footer-credit">Developed by <strong>Santona Sonar</strong></p>
+            <p class="footer-tech">Built with HTML, CSS & JavaScript</p>
+            <p class="footer-copy">© <span id="currentYear"></span> SmartResult. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="Responsive/responsiveJs.js"></script>
+    <script>
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

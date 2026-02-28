@@ -60,33 +60,33 @@
         </div>
     </header>
     <div class="main-container">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1>SmartResult Automated Student Result Management</h1>
+        <div class="hero-wrapper">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>SmartResult Automated Student Result Management</h1>
 
-                <p class="hero-description">
-                    SmartResult simplifies academic result processing by instantly calculating grades and pass/fail
-                    status
-                    in one efficient dashboard.
-                </p>
+                    <p class="hero-description">
+                        SmartResult simplifies academic result processing by instantly calculating grades and pass/fail
+                        status
+                        in one efficient dashboard.
+                    </p>
 
-                <p class="hero-subtext">
-                    Designed for teachers and educational institutions.
-                </p>
+                    <p class="hero-subtext">
+                        Designed for teachers and educational institutions.
+                    </p>
 
-                <div class="hero-features">
-                    <span>✔ Automated Grade Calculation</span>
-                    <span>✔ Instant Pass / Fail Status</span>
-                    <span>✔ Error-Free Processing</span>
-                </div>
+                    <div class="hero-features">
+                        <span>✔ Automated Grade Calculation</span>
+                        <span>✔ Instant Pass / Fail Status</span>
+                        <span>✔ Error-Free Processing</span>
+                    </div>
 
-                <div class="hero-actions">
-                    <a href="#studentForm" class="primary-btn">Try Demo</a>
+                    <div class="hero-actions">
+                        <a href="#studentForm" class="primary-btn">Try Demo</a>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="data-box">
             <div class="input-form">
                 <form id="studentForm">
                     <div class="form-group">
@@ -135,13 +135,17 @@
                     </div>
 
                     <div class="form-buttons">
-                        <button id="submit-btn" type="submit" onclick="GetResult()">Add Result</button>
+                        <button id="submit-btn" type="submit">Add Result</button>
+                        <button id="clear-btn" type="button">Clear</button>
+                        <button id="print-btn" type="button"><i class="fa-solid fa-print"></i> Print</button>
                     </div>
                 </form>
-
             </div>
         </div>
 
+        <div class="data-box">
+            <!-- Result Table will appear here -->
+        </div>
     </div>
 
     <section class="benefits-section">

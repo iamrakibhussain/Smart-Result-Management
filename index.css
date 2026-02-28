@@ -1,3 +1,22 @@
+/* Professional Color Palette & Variables */
+:root {
+    --primary-color: #2563eb;       /* Royal Blue */
+    --primary-hover: #1d4ed8;       /* Darker Blue */
+    --secondary-color: #64748b;     /* Slate Gray */
+    --bg-color: #f8fafc;            /* Light Slate Background */
+    --card-bg: #ffffff;             /* White */
+    --text-main: #0f172a;           /* Dark Slate */
+    --text-muted: #475569;          /* Medium Slate */
+    --border-color: #e2e8f0;        /* Light Border */
+    --success-bg: #dcfce7;          /* Light Green */
+    --success-text: #166534;        /* Dark Green */
+    --danger-bg: #fee2e2;           /* Light Red */
+    --danger-text: #991b1b;         /* Dark Red */
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,10 +24,11 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
     line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
 }
 
 #mobile-header {
@@ -17,8 +37,9 @@ body {
 
 header {
     width: 100%;
-    background-color: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    background-color: var(--card-bg);
+    box-shadow: var(--shadow-sm);
+    border-bottom: 1px solid var(--border-color);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -36,7 +57,8 @@ header {
 .logo h1 {
     font-size: 25px;
     font-weight: 700;
-    color: #1a73e8;
+    color: var(--primary-color);
+    letter-spacing: -0.5px;
 }
 
 .logo a {
@@ -55,59 +77,67 @@ nav ul li a {
     font-size: 16px;
     font-weight: 500;
     text-decoration: none;
-    color: #3d3d3d;
-    padding: 8px 16px;
-    border-radius: 8px;
+    color: var(--text-muted);
+    padding: 8px 18px;
+    border-radius: 6px;
     transition: all 0.3s ease;
 }
 
 nav ul li a:hover {
-    background-color: #eaf2ff;
-    color: #000;
-    box-shadow: 0 2px 6px rgba(26, 115, 232, 0.2);
+    background-color: #eff6ff;
+    color: var(--primary-color);
 }
 
 .register i {
-    font-size: 22px;
-    color: #000;
+    font-size: 20px;
+    color: var(--text-muted);
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .register i:hover {
-    color: #656668;
+    color: var(--primary-color);
+    transform: scale(1.1);
 }
 
 .main-container {
     max-width: 1200px;
     margin: 40px auto;
     padding: 40px 20px 0 20px;
+}
+
+.hero-wrapper {
     display: flex;
-    flex-direction: column;
-    gap: 40px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    margin-bottom: 50px;
 }
 
 .hero-text {
-    text-align: center;
+    text-align: left;
 }
 
 .hero-text h1 {
     font-size: 32px;
-    font-weight: 700;
-    color: #000;
+    font-weight: 800;
+    color: var(--text-main);
     margin-bottom: 20px;
+    letter-spacing: -1px;
 }
 
 .hero-description {
-    font-size: 17px;
-    color: #4b5563;
+    font-size: 18px;
+    color: var(--text-muted);
     line-height: 1.7;
     margin: 15px 0 10px;
+    max-width: 600px;
 }
 
 .hero-subtext {
     font-size: 14px;
-    color: #6b7280;
+    color: var(--secondary-color);
     margin-bottom: 20px;
 }
 
@@ -115,17 +145,18 @@ nav ul li a:hover {
     display: flex;
     flex-wrap: wrap;
     gap: 12px 20px;
-    margin: 30px auto;
-    justify-content: center;
+    margin: 30px 0;
+    justify-content: flex-start;
 }
 
 .hero-features span {
     font-size: 14px;
-    color: #374151;
-    background-color: #f3f4f6;
-    padding: 6px 12px;
-    border-radius: 6px;
+    color: var(--primary-color);
+    background-color: #eff6ff;
+    padding: 8px 16px;
+    border-radius: 50px;
     font-weight: 500;
+    border: 1px solid #dbeafe;
 }
 
 .hero-actions {
@@ -134,30 +165,32 @@ nav ul li a:hover {
 
 .primary-btn {
     display: inline-block;
-    padding: 12px 50px;
-    background-color: #2563eb;
+    padding: 14px 40px;
+    background-color: var(--primary-color);
     color: #fff;
     font-size: 15px;
     font-weight: 600;
     border-radius: 8px;
     text-decoration: none;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
 }
 
 .primary-btn:hover {
-    background-color: #1d4ed8;
+    background-color: var(--primary-hover);
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
+    box-shadow: 0 6px 12px rgba(37, 99, 235, 0.3);
 }
 
 .input-form {
-    background-color: #fff;
+    background-color: var(--card-bg);
     padding: 40px 30px;
-    border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-    width: 60%;
-    max-width: 900px;
-    margin: 10px auto;
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-color);
+    width: 100%;
+    max-width: 500px;
+    margin: 0;
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -165,7 +198,7 @@ nav ul li a:hover {
 }
 
 .input-form:hover {
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 .input-form form {
@@ -184,22 +217,24 @@ nav ul li a:hover {
 .form-group label {
     font-weight: 600;
     font-size: 16px;
-    margin-bottom: 5px;
-    color: #1a73e8;
+    margin-bottom: 8px;
+    color: var(--text-main);
 }
 
 .form-group input {
-    padding: 8px 15px;
-    border: 1.5px solid #ccc;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     font-size: 16px;
     transition: all 0.3s ease;
     outline: none;
+    background-color: #f8fafc;
 }
 
 .form-group input:focus {
-    border-color: #1a73e8;
-    box-shadow: 0 2px 6px rgba(26, 115, 232, 0.2);
+    border-color: var(--primary-color);
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
 .form-buttons button {
@@ -213,28 +248,30 @@ nav ul li a:hover {
 }
 
 .form-buttons button[type="submit"] {
-    background: #1a73e8;
+    background: var(--primary-color);
     color: #fff;
+    box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
 }
 
 .form-buttons button[type="submit"]:hover {
-    background: #0b47a1;
-    box-shadow: 0 4px 12px rgba(26, 115, 232, 0.3);
+    background: var(--primary-hover);
+    transform: translateY(-1px);
 }
 
 .form-buttons button[type="reset"] {
-    background: #f0f0f0;
-    color: #333;
+    background: #fff;
+    color: var(--text-muted);
+    border: 1px solid var(--border-color);
 }
 
-.form-buttons button[type="reset"]:hover {
-    background: #e0e0e0;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+.form-buttons button[type="button"]:hover {
+    background: #f1f5f9;
+    color: var(--text-main);
 }
 
 .data-box {
-    width: 95%;
-    max-width: 1100px;
+    width: 100%;
+    max-width: 1200px;
     margin: auto;
     overflow-x: auto;
 }
@@ -289,13 +326,13 @@ td.fail {
 }
 
 .delete-btn:hover {
-    background-color: #c62828;
-    transform: scale(1.05);
+    background-color: var(--danger-bg);
+    border-color: var(--danger-text);
 }
 
 .site-footer {
-    background-color: #0f172a;
-    color: #e5e7eb;
+    background-color: #0f172a; /* Keep dark footer */
+    color: #94a3b8;
     padding: 40px 20px;
     margin-top: 60px;
     font-family: Arial, Helvetica, sans-serif;
@@ -310,13 +347,13 @@ td.fail {
 .footer-title {
     font-size: 22px;
     font-weight: 600;
-    color: #fff;
+    color: #f8fafc;
     margin-bottom: 8px;
 }
 
 .footer-tagline {
     font-size: 14px;
-    color: #cbd5f5;
+    color: #64748b;
     margin-bottom: 16px;
 }
 
@@ -326,7 +363,7 @@ td.fail {
 }
 
 .footer-credit strong {
-    color: #60a5fa;
+    color: #38bdf8;
 }
 
 .footer-tech {
@@ -348,11 +385,11 @@ td.fail {
 }
 
 .benefits-section {
-    background-color: #f9fafb;
+    background-color: var(--bg-color);
 }
 
 .users-section {
-    background-color: #fff;
+    background-color: var(--card-bg);
 }
 
 .section-header {
@@ -364,13 +401,13 @@ td.fail {
 .section-header h2 {
     font-size: 32px;
     font-weight: 700;
-    color: #1f2937;
+    color: var(--text-main);
     margin-bottom: 12px;
 }
 
 .section-header p {
     font-size: 16px;
-    color: #6b7280;
+    color: var(--text-muted);
     line-height: 1.6;
 }
 
@@ -381,17 +418,17 @@ td.fail {
 }
 
 .benefit-card {
-    background: #fff;
+    background: var(--card-bg);
     padding: 30px 25px;
-    border-radius: 12px;
-    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
     transition: all 0.3s ease;
 }
 
 .benefit-card h3 {
     font-size: 20px;
     font-weight: 600;
-    color: #111827;
+    color: var(--text-main);
     margin-bottom: 10px;
 }
 
@@ -403,7 +440,7 @@ td.fail {
 
 .benefit-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow-lg);
 }
 
 .users-grid {
@@ -413,17 +450,17 @@ td.fail {
 }
 
 .user-card {
-    background: #f9fafb;
+    background: var(--bg-color);
     padding: 30px 25px;
-    border-radius: 12px;
-    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
     transition: all 0.3s ease;
 }
 
 .user-card h3 {
     font-size: 20px;
     font-weight: 600;
-    color: #111827;
+    color: var(--text-main);
     margin-bottom: 10px;
 }
 
@@ -434,7 +471,45 @@ td.fail {
 }
 
 .user-card:hover {
-    background-color: #fff;
+    background-color: var(--card-bg);
     transform: translateY(-6px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Print Styles */
+@media print {
+    header, 
+    .hero-content, 
+    .input-form, 
+    .benefits-section, 
+    .users-section, 
+    .site-footer,
+    .no-print {
+        display: none !important;
+    }
+
+    .main-container {
+        margin: 0;
+        padding: 0;
+    }
+
+    .data-box {
+        width: 100%;
+        box-shadow: none;
+    }
+
+    #resultTable {
+        border: 1px solid #000;
+    }
+
+    #resultTable th, 
+    #resultTable td {
+        border: 1px solid #000;
+        color: #000;
+    }
+    
+    #resultTable th {
+        background-color: #f0f0f0 !important;
+        color: #000 !important;
+    }
 }
